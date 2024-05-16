@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Worker extends Model
 {
     use HasFactory;
-    public function attendance(){
+    protected $guarded=[];
+public function attendance(){
         return $this->hasMany(Attendance::class);
     }
 }

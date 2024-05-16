@@ -53,7 +53,7 @@ class AttendanceService
      * @param $longitude
      * @return float
      */
-    private function checkDistance($latitude, $longitude): float
+    public function checkDistance($latitude, $longitude): float
     {
         $theta = $longitude - self::LONGITUDE;
         $dist = sin(deg2rad($latitude)) * sin(deg2rad(self::LATITUDE)) + cos(deg2rad($latitude)) * cos(deg2rad(self::LATITUDE)) * cos(deg2rad($theta));
